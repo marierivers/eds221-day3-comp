@@ -82,3 +82,38 @@ switch(species,
        "fox" = print("obnmoxious"),
        print("something else"))
 
+vec <- seq(from = 0, to = 12, by = 0.5)
+length(vec)
+
+bats <- c(0, -1, 2, 1000, 500, 6)
+seq_along(bats)
+
+tigers <- c(29, 34, 82)
+lions <- c(2, 18, 6)
+
+big_cats <- vector(mode = "numeric", length = length(tigers))
+
+for (i in seq_along(tigers)) {
+  total_cats <- tigers[i] + lions[i]
+  big_cats[i] <- total_cats
+}
+big_cats
+seq_along(tigers)
+
+animal <- c("cat", "dog", "dog", "zebra", "dog")
+for (i in seq_along(animal)) {
+  if (animal[i] == "dog") {
+    print("I love dogs")
+  } else
+    print("these are other animals")
+}
+View(mtcars)
+mean_mtcars <- vector(mode = "numeric", length = ncol(mtcars))
+
+for (i in 1:ncol(mtcars)) {
+  mean_val <- mean(mtcars[[i]], na.rm = TRUE)
+  mean_mtcars[[i]] <- mean_val
+}
+mean_mtcars
+
+# ncol() returns the number of columns in a data frame
